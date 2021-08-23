@@ -13,7 +13,6 @@ function fetchDog() {
 function* workerSaga() {
   try {
     const response = yield call(fetchDog);
-    console.log(response);
     const dog = response.data.message;
 
     // dispatch a success action to the store with the new dog
